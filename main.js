@@ -26,5 +26,5 @@ document.querySelector('#app').innerHTML = `
 setupLinkToggle(document.querySelector("#vanil"), `${typescriptLogo}`);
 setupCounter(document.querySelector('#counter'))
 setupDarkModeToggle(document.querySelector('#dark-mode'))
-
+$('#hd').css("color", "blue")
 
