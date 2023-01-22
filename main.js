@@ -1,9 +1,13 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import { setupNavBar } from './components/NavBar.js'
+import { form, passwordInput, emailInput, submitBtn } from './modules/login_form.js'
+import { login, logout, loggedIn } from './modules/login.js'
 
 
 
+
+if (!loggedIn ){
   document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -14,7 +18,7 @@ import { setupNavBar } from './components/NavBar.js'
     </a>
     <h1 id="hd">Hello world!</h1>
     <div class="card">
-      <button id="counter" type="button"></button>
+      
     </div
     <p class="read-the-docs">
     <
@@ -22,6 +26,17 @@ import { setupNavBar } from './components/NavBar.js'
     </p>
   </div>
 `
+}else{
+  document.querySelector('#app').innerHTML = `
+  <div>
+  ${form.outerHTML}
+  </div>`
+}
+
+
+
+
+
 
 const navbar = document.querySelector('#navbar')
 setupNavBar(navbar)
